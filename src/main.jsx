@@ -35,20 +35,20 @@ const router = createBrowserRouter([
         loader : () => fetch('http://localhost:3000/brand')
       },
       {
-        path : '/brandDetails/:id', 
+        path : '/brandDetails/:brandName', 
         element : <BrandDetails></BrandDetails>,
         loader : () => fetch('http://localhost:3000/brand')
       },
       {
         path : '/addProduct', 
         element : <AddProduct></AddProduct> ,
-        loader : () => fetch('http://localhost:3000/products')
+        // loader : () => fetch('http://localhost:3000/products')
         
       },
       {
         path : '/updateProduct', 
         element : <UpdateProduct></UpdateProduct>,
-        loader : () => fetch('http://localhost:3000/brand')
+        loader : () => fetch('http://localhost:3000/products')
         
       },
       {

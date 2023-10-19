@@ -6,8 +6,8 @@ const Brand = ({brand}) => {
 
     const {id,title, image} = brand
     return (
-        <Link to={`/brandDetails/${id}`}>
-            <div >
+        <Link to={`/brandDetails/${title}`}>
+            <div > 
             
             
 
