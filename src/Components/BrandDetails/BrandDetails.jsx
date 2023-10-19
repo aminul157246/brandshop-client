@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
+import Details from "../Details/Details";
 // import {FcRating} from 'react-icons/fc'
 
 const BrandDetails = () => {
@@ -19,16 +20,16 @@ const BrandDetails = () => {
     // const findDetails = details.find((prod) => prod.id== id);
     fetch(`http://localhost:3000/products/findDetails.title`) 
     setDetail(findDetails);
-    setProducts(findDetails)
+    // setProducts(findDetails)
 
   }, [brandName, details]);
 
 
 useEffect(()=> {
-    fetch('http://localhost:3000/products/brandName')
+    fetch(`http://localhost:3000/products/${brandName}`)
     .then(res => res.json())
     .then(data => setProducts(data))
-},[products])
+},[brandName,products])
 
     return (
         <div className="max-w-7xl mx-auto">
@@ -123,7 +124,11 @@ Get ready to hit the road with our exclusive car offer! Unleash the thrill <br /
 
 <div>
     <h2>Product : {products.length} </h2>
-    {/* <h2>Product name : {products.name} </h2> */}
+    <div className="grid grid-cols-2">
+    {
+      products.map(product => <Details key={product._id} product={product}></Details>)
+    }
+    </div>
 
     
 </div>
