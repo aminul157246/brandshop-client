@@ -3,6 +3,9 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useContext } from "react";
 import logo from "../../assets/images/logo.png"
 
+
+ 
+
 const Navbar = () => {
 
   const { user, logOut } = useContext(AuthContext);
@@ -56,6 +59,8 @@ const Navbar = () => {
               <li><NavLink to={'/register'}>Register</NavLink></li>
               <li><NavLink to={'/login'}>Login</NavLink></li>
           </ul>
+
+ 
         </div>
         <div className="navbar-end">
                     {

@@ -1,13 +1,41 @@
 
-import { useLoaderData,   } from 'react-router-dom';
-import Swal from 'sweetalert2'
+import { useEffect, useState } from 'react';
+import {  useLoaderData, useParams,   } from 'react-router-dom';
+// import Swal from 'sweetalert2'
 const UpdateProduct  = ( ) => {
 
+const datas = useLoaderData()
+console.log(datas);
+// const {id} = useParams()
+// console.log(id);
 
-const product = useLoaderData()
-const {name, brandName,type,price,shortDes,rating,photo} = product
+// const [data ,setData] = useState([])
+// useEffect(()=>{
+//     fetch(`http://localhost:3000/product/brandName/${id}`)
+//     .then(res => res.json())
+//     .then(data => setData(data))
 
-console.log(product);
+// },[])
+
+// console.log(data);
+
+
+
+
+
+
+
+
+
+// const product = useLoaderData()
+// // const {name, brandName,type,price,shortDes,rating,photo} = product
+// console.log(product);
+// console.log(product);
+
+
+
+
+
     const handleUpdateProduct  = event => {
         event.preventDefault()
     
@@ -23,27 +51,27 @@ console.log(product);
         console.log(newProduct );
     
       // send data in server from here
-      fetch('http://localhost:3000/products/', {
-        method : 'POST', 
-        headers : {
-          "Content-Type": "application/json",
-        },
-        body : JSON.stringify(newProduct )
-      })
+      // fetch('http://localhost:3000/products/', {
+      //   method : 'POST', 
+      //   headers : {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body : JSON.stringify(newProduct )
+      // })
     
       
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        if(data.insertedId){
-          Swal.fire({
-            title: 'Success!',
-            text: 'Product  added successfully.  😻 ',
-            icon: 'success',
-            confirmButtonText: 'Cool'
-          })
-        }
-      })
+      // .then(res => res.json())
+      // .then(data => {
+      //   console.log(data);
+      //   if(data.insertedId){
+      //     Swal.fire({
+      //       title: 'Success!',
+      //       text: 'Product  added successfully.  😻 ',
+      //       icon: 'success',
+      //       confirmButtonText: 'Cool'
+      //     })
+      //   }
+      // })
     
         
       }

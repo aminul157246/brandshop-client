@@ -123,8 +123,8 @@ Get ready to hit the road with our exclusive car offer! Unleash the thrill <br /
 
 
 <div>
-    <h2>Product : {products.length} </h2>
-    <div className="grid grid-cols-2">
+    {/* <h2>Product : {products.length} </h2> */}
+    <div className="grid grid-cols-4 gap-6 ">
     {
       products.map(product => <Details key={product._id} product={product}></Details>)
     }
