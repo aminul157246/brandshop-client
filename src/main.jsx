@@ -42,8 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path : '/addProduct', 
-        element : <AddProduct></AddProduct> ,
-        // loader : () => fetch('http://localhost:3000/products')
+        element :  <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
         
       },
       {
@@ -58,14 +57,14 @@ const router = createBrowserRouter([
 
       {
         path : '/updateProduct', 
-        element : <UpdateProduct></UpdateProduct>,
+        element : <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>
         
         
         
       },
       {
         path : '/myCart', 
-        element : <MyCart></MyCart>
+        element : <PrivateRoute><MyCart></MyCart></PrivateRoute>
       },
       {
         path : '/specialOffer', 

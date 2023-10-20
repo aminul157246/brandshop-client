@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Details = ({product}) => {
+  
     const {photo,_id, name,brandName,type,shortDes,price, rating,} = product;
+  
+ 
     // console.log(_id);
     return (
         <div className="max-w-7xl mx-auto my-12">
+          
             <div className="card   bg-base-100    h-[500px]  shadow-xl">
-   <img className="w-[320px] h-[180px]  "  src={ photo} alt="" /> 
+   <img className="w-full lg:w-[320px] h-[180px]  "  src={ photo} alt="" /> 
   <div className="card-body">
   <div className="flex gap-24">
   <h2 className="text-2xl">  { name} </h2>
@@ -27,5 +32,16 @@ const Details = ({product}) => {
         </div>
     );
 };
+
+
+
+Details.propTypes = {
+        product: PropTypes.object,
+}
+
+
+
+
+
 
 export default Details;

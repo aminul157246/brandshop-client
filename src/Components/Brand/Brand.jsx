@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 const Brand = ({ brand }) => {
-  const { id, title, image } = brand;
+  const {   title, image } = brand;
   return (
     <Link to={`/brandDetails/${title}`}>
       <div className="max-w-7xl mx-auto ">
@@ -15,5 +15,10 @@ const Brand = ({ brand }) => {
     </Link>
   );
 };
+
+
+Brand.propTypes = {
+  brand: PropTypes.object,
+}
 
 export default Brand;
