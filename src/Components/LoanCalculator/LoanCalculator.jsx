@@ -9,7 +9,7 @@ const LoanCalculator = () => {
             <h2 className='text-4xl font-bold text-center pt-12'>Loan Calculator</h2>
             <p className='text-gray-600 text-center'>Use our loan calculator to calculate payments over the life of your loan. Enter your br information to see how much your monthly payments could be. <br /> You can adjust length of loan, down payment and interest rate to see how those changes raise or lower your payments.</p>
 
-            <div className='flex justify-center gap-6'>
+            <div className='lg:flex p-12 lg:p-0   justify-center gap-6'>
                 <div>
                 <div className="form-control">
   <label className="label">

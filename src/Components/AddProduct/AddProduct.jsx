@@ -60,16 +60,16 @@ const AddProduct  = () => {
     
     
         <form onSubmit={handleAddProduct }>
-          {/* form row  2*/}
-          <div className='flex justify-center gap-8'>
-            <div className="form-control w-1/2">
+          
+          <div className='lg:flex justify-center gap-8'>
+            <div className="form-control lg:w-1/2">
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
               <input type="text" placeholder=" Name" className="input input-bordered" name="name" required />
             </div>
     
-            <div className="form-control w-1/2">
+            <div className="form-control  lg:w-1/2">
               <label className="label">
                 <span className="label-text">Brand Name</span>
               </label>
@@ -77,16 +77,16 @@ const AddProduct  = () => {
             </div>
           </div>
     
-          {/* form row  3*/}
-          <div className='flex justify-center gap-8'>
-            <div className="form-control w-1/2">
+          
+          <div className='lg:flex justify-center gap-8'>
+            <div className="form-control  lg:w-1/2">
               <label className="label">
                 <span className="label-text">Type</span>
               </label>
               <input type="text" placeholder="Type" className="input input-bordered" name="type" required />
             </div>
     
-            <div className="form-control w-1/2">
+            <div className="form-control  lg:w-1/2">
               <label className="label">
                 <span className="label-text">Price</span>
               </label>
@@ -94,16 +94,16 @@ const AddProduct  = () => {
             </div>
           </div>
     
-          {/* form row  4*/}
-          <div className='flex justify-center gap-8'>
-            <div className="form-control w-1/2">
+          
+          <div className='lg:flex justify-center gap-8'>
+            <div className="form-control  lg:w-1/2">
               <label className="label">
                 <span className="label-text">Short Description</span>
               </label>
               <input type="text" placeholder="Short Description" className="input input-bordered" name="shortDes" required />
             </div>
     
-            <div className="form-control w-1/2">
+            <div className="form-control  lg:w-1/2">
               <label className="label">
                 <span className="label-text">Rating</span>
               </label>

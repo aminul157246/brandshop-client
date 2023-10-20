@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       {
         path : '/updateProduct', 
         element : <UpdateProduct></UpdateProduct>,
-        loader : ({params}) => fetch(`http://localhost:3000/product/brandName/${params.id}`)
+        
         
         
       },
@@ -98,7 +98,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <RouterProvider router={router} />
+    <RouterProvider  router={router} />
     </AuthProvider>
   </React.StrictMode>,
 )

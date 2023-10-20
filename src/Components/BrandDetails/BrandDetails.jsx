@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import {   useLoaderData, useParams } from "react-router-dom";
 import Details from "../Details/Details";
 // import {FcRating} from 'react-icons/fc'
 
