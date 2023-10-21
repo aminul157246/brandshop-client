@@ -33,12 +33,12 @@ const router = createBrowserRouter([
       {
         path : '/', 
         element : <Home></Home>,
-        loader : () => fetch('http://localhost:3000/brand')
+        loader : () => fetch(' https://brand-shop-server-ij2rekxmp-aminul-islams-projects.vercel.app/brand')
       },
       {
         path : '/brandDetails/:brandName', 
         element : <BrandDetails></BrandDetails>,
-        loader : () => fetch('http://localhost:3000/brand')
+        loader : () => fetch(' https://brand-shop-server-ij2rekxmp-aminul-islams-projects.vercel.app/brand')
       },
       {
         path : '/addProduct', 
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       {
         path : '/singleCarDetails/:id', 
         element : <CarDetails></CarDetails>,
-        loader : ({params}) => fetch(`http://localhost:3000/product/brandName/${params.id}`)
+        loader : ({params}) => fetch(` https://brand-shop-server-ij2rekxmp-aminul-islams-projects.vercel.app/product/brandName/${params.id}`)
         
       },
 
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
 
 
       {
-        path : '/updateProduct', 
+        path : '/updateProduct/:id', 
         element : <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>
         
         

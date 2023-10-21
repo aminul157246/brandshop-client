@@ -1,11 +1,16 @@
+import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateProduct  = ( ) => {
 
-
+  const {id} = useParams()
 
     const handleUpdateProduct  = event => {
         event.preventDefault()
+
+
+
+      
     
         const form = event.target;
         const name = form.name.value;
@@ -18,8 +23,8 @@ const UpdateProduct  = ( ) => {
         const newProduct  = {name, brandName,type,price,shortDes,rating,photo}
         console.log(newProduct );
     
-      // // send data in server from here
-      fetch('http://localhost:3000/products/', {
+      // send data in server from here
+      fetch(` https://brand-shop-server-ij2rekxmp-aminul-islams-projects.vercel.app/product/brandName/${id}`, {
         method : 'PUT', 
         headers : {
           "Content-Type": "application/json",
@@ -31,7 +36,7 @@ const UpdateProduct  = ( ) => {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        if(data.insertedId){
+        if(data.modifiedCount>0){
           Swal.fire({
             title: 'Success!',
             text: 'Product  added successfully.  😻 ',

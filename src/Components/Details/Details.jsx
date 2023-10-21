@@ -25,7 +25,7 @@ const Details = ({product}) => {
     <p>{shortDes}</p>
     <div className="card-actions justify-center">
       <Link to={`/singleCarDetails/${ _id}`}><button className="bg-black text-white px-4 py-2 rounded-3xl">Details</button></Link>
-      <Link to={`/updateProduct`}><button className="bg-black text-white px-4 py-2 rounded-3xl">Update</button></Link>
+      <Link to={`/updateProduct/${_id}`}><button className="bg-black text-white px-4 py-2 rounded-3xl">Update</button></Link>
     </div>
   </div>
 </div>
