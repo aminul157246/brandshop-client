@@ -1,5 +1,14 @@
 # Live link : https://brand-shop-d10ed.web.app/
 
+
+> ## Technologies I used in this website : 
+
+ 
+ [![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,js,react,tailwind,nextjs,mongodb)](https://skillicons.dev)
+
+
+
+
 ## About my projects 
 ### 1.Utilizes MongoDB for database management, 
 ### 2.React for the front-end, and Node.js/Express.js for the back-end.
